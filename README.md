@@ -2,7 +2,7 @@
 
 Welcome to the **Social Networking Site** built using the **MERN Stack** (MongoDB, Express, React, Node.js). This project offers users the ability to connect with each other, share posts, like content, and more, similar to popular social networking platforms.
 
-![Website Screenshot](./frontend/public/images/App_ui)
+![Website Screenshot](./frontend/public/images/screenshot1.png)
 
 ## 🚀 Live Demo
 
