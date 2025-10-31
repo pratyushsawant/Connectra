@@ -6,7 +6,7 @@ Welcome to the **Social Networking Site** built using the **MERN Stack** (MongoD
 
 ## 🚀 Live Demo
 
-Check out the live demo of the application [here](https://fb-mern.vercel.app/).
+Check out the live demo of the application [here](https://connectra-nine.vercel.app/login).
 
 ## 📄 Description
 
