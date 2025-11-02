@@ -111,10 +111,12 @@ To run the project locally, follow these steps:
    > - Check that the backend is running and can connect to MongoDB
    > - Verify your `.env.local` file has `NEXT_PUBLIC_BACKEND_API=http://localhost:8000`
 
-## 👨‍💻 Developer
+## 👨‍💻 Developers
 
 **Pratyush**  
 [LinkedIn](https://www.linkedin.com/in/pratyushsawant/)
+**Tailyn**
+[LinkedIn](linkedin.com/in/tailynb/)
 
 Feel free to check out the live demo and connect with me on LinkedIn!
 # Connectra
