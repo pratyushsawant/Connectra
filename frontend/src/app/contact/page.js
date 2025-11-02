@@ -45,7 +45,7 @@ export default function ContactPage() {
       link: 'https://wa.link/fcyw8d',
       icon: <FaWhatsapp className="text-2xl" />,
       description: "Let's chat about projects, ideas, or collaborations!",
-      username: '923014340329',
+      username: '18065597135',
       color: 'bg-green-50 text-green-600 border-green-200',
       iconBg: 'bg-green-500',
       hoverColor: 'hover:border-green-400 hover:shadow-green-200',
@@ -65,7 +65,7 @@ export default function ContactPage() {
       name: 'Direct Message',
       description: 'Send me a direct message for quick responses',
       icon: <FiMessageSquare className="text-indigo-600 text-2xl" />,
-      action: 'https://wa.link/fcyw8d',
+      action: '18065597135',
       color: 'bg-indigo-50 border-indigo-200',
       hoverColor: 'hover:border-indigo-400 hover:bg-indigo-100',
     }
@@ -254,4 +254,5 @@ export default function ContactPage() {
       </main>
     </AuthRedirect>
   );
+
 }
