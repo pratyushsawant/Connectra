@@ -45,7 +45,7 @@ export default function ContactPage() {
       link: 'https://wa.link/fcyw8d',
       icon: <FaWhatsapp className="text-2xl" />,
       description: "Let's chat about projects, ideas, or collaborations!",
-      username: '18065597135',
+      username: '923014340329',
       color: 'bg-green-50 text-green-600 border-green-200',
       iconBg: 'bg-green-500',
       hoverColor: 'hover:border-green-400 hover:shadow-green-200',
@@ -254,6 +254,4 @@ export default function ContactPage() {
       </main>
     </AuthRedirect>
   );
-
 }
-
