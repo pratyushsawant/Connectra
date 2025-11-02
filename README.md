@@ -50,20 +50,49 @@ To run the project locally, follow these steps:
     npm install
     ```
 
-3. **Set up environment variables**:
-   - Create a `.env` file in the root directory of the backend and add the following:
+3. **Set up MongoDB**:
+   - **Option 1: Local MongoDB (Recommended for development)**
+     - Install MongoDB Community Edition:
+       ```bash
+       brew tap mongodb/brew
+       brew install mongodb-community@8.0
+       brew services start mongodb-community@8.0
+       ```
+     - Verify MongoDB is running:
+       ```bash
+       brew services list | grep mongodb
+       ```
+   
+   - **Option 2: MongoDB Atlas (Cloud - Easier setup)**
+     - Create a free account at [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
+     - Create a new cluster and get your connection string
+     - Use the connection string in your `.env` file
+
+4. **Set up environment variables**:
+   - **Backend**: Create a `.env` file in the `backend` directory:
     ```env
-    MONGO_URI =
-    PORT =
-    CORS_ORIGIN=
-    JWT_SECRET=
+    MONGO_URI=mongodb://localhost:27017
+    PORT=8000
+    CORS_ORIGIN=http://localhost:3000
+    JWT_SECRET=your-super-secret-jwt-key-change-in-production
 
     CLOUDINARY_CLOUD_NAME=
     CLOUDINARY_API_KEY=
     CLOUDINARY_API_SECRET=
     ```
+    > **Note**: For MongoDB Atlas, replace `MONGO_URI` with your Atlas connection string.
+   
+   - **Frontend**: Create a `.env.local` file in the `frontend` directory:
+    ```env
+    NEXT_PUBLIC_BACKEND_API=http://localhost:8000
 
-4. **Start the development server**:
+    NEXTAUTH_URL=http://localhost:3000
+    GOOGLE_CLIENT_ID=your-google-client-id
+    GOOGLE_CLIENT_SECRET=your-google-client-secret
+    NEXTAUTH_SECRET=your-nextauth-secret-key
+    ```
+
+5. **Start the development server**:
    - Run the backend server:
     ```bash
     npm run dev
@@ -73,8 +102,14 @@ To run the project locally, follow these steps:
     npm run dev
     ```
 
-5. **Access the app**: 
-   - Open your browser and go to `http://localhost:3000` for the frontend and `http://localhost:<Backend Port>` for the backend.
+6. **Access the app**: 
+   - Frontend: Open your browser and go to `http://localhost:3000`
+   - Backend API: Available at `http://localhost:8000`
+   
+   > **Troubleshooting**: If the frontend shows "Please Wait..." and doesn't load:
+   > - Make sure MongoDB is running: `brew services list | grep mongodb`
+   > - Check that the backend is running and can connect to MongoDB
+   > - Verify your `.env.local` file has `NEXT_PUBLIC_BACKEND_API=http://localhost:8000`
 
 ## 👨‍💻 Developer
 

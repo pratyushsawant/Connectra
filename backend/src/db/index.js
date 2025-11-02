@@ -4,10 +4,21 @@ const mongoURI = process.env.MONGO_URI;
 
 const connectToMongo = async ()=>{
    try {
-      const connectionInstance = await mongoose.connect(`${mongoURI}/${DB_NAME}`);
-      console.log(`Connected to mongo !! HOST: ${connectionInstance.connection.host}`);
+      // Add connection timeout
+      const connectionOptions = {
+         serverSelectionTimeoutMS: 5000, // 5 second timeout
+         socketTimeoutMS: 45000,
+      };
+      
+      const connectionInstance = await mongoose.connect(`${mongoURI}/${DB_NAME}`, connectionOptions);
+      console.log(`✅ Connected to MongoDB! HOST: ${connectionInstance.connection.host}`);
+      return connectionInstance;
    } catch (error) {
-      console.error("Error connecting with database", error);
+      console.error("❌ Error connecting to MongoDB:", error.message);
+      console.error("\n💡 Make sure MongoDB is running:");
+      console.error("   - Install MongoDB: brew install mongodb-community");
+      console.error("   - Start MongoDB: brew services start mongodb-community");
+      console.error("   - Or use MongoDB Atlas (cloud) and update MONGO_URI in .env\n");
       process.exit(1);
    }
 }
