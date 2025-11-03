@@ -240,7 +240,7 @@ export default function ContactPage() {
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="https://app.netlify.com/teams/pratyushsawant/projects"
+                href="https://pratyushsawant.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-bold text-lg rounded-xl shadow-lg hover:bg-blue-700 transition-all duration-300"
@@ -256,3 +256,4 @@ export default function ContactPage() {
   );
 
 }
+
